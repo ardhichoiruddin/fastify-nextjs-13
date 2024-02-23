@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fastify/nextjs": "^10.0.1",
+    "@fastify/under-pressure": "^8.3.0",
     "@material-tailwind/react": "^2.1.9",
     "cross-env": "^7.0.3",
     "fastify": "^4.26.1",
