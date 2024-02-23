@@ -4,11 +4,13 @@ import { parse } from "url";
 
 import authRoutes from "./server/module/auth/auth.route";
 
+import isDev from "./server/utils/isDev";
+
 const server = Fastify({
   pluginTimeout: 100000,
 });
 
-server.register(fastifyNextJs, { dev: true });
+server.register(fastifyNextJs, { dev: isDev });
 
 server.all("*", async (request, reply) => {
   const parsedUrl = parse(request.url, true);
