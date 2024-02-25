@@ -7,7 +7,7 @@ import authRoutes from "./server/module/auth/auth.route";
 import isDev from "./server/utils/isDev";
 
 const server = Fastify({
-  pluginTimeout: 100000,
+  pluginTimeout: isDev ? 100000 : 10000,
 });
 
 server.register(fastifyNextJs, { dev: isDev });

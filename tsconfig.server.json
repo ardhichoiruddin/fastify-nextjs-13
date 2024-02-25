@@ -1,12 +1,16 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "target": "es6",
     "module": "commonjs",
     "outDir": "dist",
-    "lib": ["es2019"],
-    "target": "es2019",
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "isolatedModules": false,
-    "noEmit": false
+    "noEmit": false,
+    "moduleResolution": "Node"
   },
-  "include": ["index.ts"]
+  "include": ["index.ts"],
+  "exclude": ["node_modules", "src", "public", "dist"]
 }
